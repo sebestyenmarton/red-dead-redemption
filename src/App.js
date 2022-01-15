@@ -1,12 +1,14 @@
 import "./App.scss";
+import Home from "./pages";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <div className="cim-background dragElement" />
-      <div className="lovas-background" />
-      <div className="foszereplo-background" />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
