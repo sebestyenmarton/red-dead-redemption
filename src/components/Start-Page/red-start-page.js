@@ -6,6 +6,8 @@ const RedStartPage = () => {
   const [startPageVisibility, setStartPageVisibility] = useState(false);
   const [timerValue, setTimerValue] = useState(false);
 
+  //  Az alábbi függvénnyel beállítható az, hogy mikortól legyen kattintható a startPage
+  //  Például 3000 millisecundum megfelel 1 másodpercnek
   useEffect(() => {
     const timer = setTimeout(() => {
       console.log("Működik");
@@ -25,7 +27,7 @@ const RedStartPage = () => {
       className={`start-page ${startPageVisibility ? "deactivated" : ""}`}
       onClick={dissolve}
     >
-      <div className="cim-background dragElement" />
+      <div className="cim-background" />
       <div className="lovas-background" />
       <div className="kattints-felirat">
         Kattints, hogy

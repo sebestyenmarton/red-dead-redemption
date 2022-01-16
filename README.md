@@ -2,7 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Setup
+## Setup || TUDNIVALÓK
+
+Fontosabb helyek a webaplikációban, ahol kommenteket lehet találni és egyszerűen lehet változtatni a kódot:
+
+### `red-start-page.js` - Állítható az, hogy mikortól legyen kattintható a Start Page.
+
+### A következő parancsokat kell futtatni a terminal-ban, ahhoz, hogy végül elinduljon az applikáció:
 
 Install project dependencies
 
