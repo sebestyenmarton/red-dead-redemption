@@ -2,6 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Setup
+
+Install project dependencies
+
+        npm install
+
+To install the React-Dom:
+
+        npm i react-router-dom
+
+To install React-ICONS
+
+        npm install react-icons --save
+
 ## Available Scripts
 
 In the project directory, you can run:

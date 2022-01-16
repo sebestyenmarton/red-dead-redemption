@@ -1,5 +1,4 @@
 * {
-  margin: 0px;
   .home-page {
     text-align: center;
     position: relative;
@@ -8,9 +7,13 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-size: 100px;
     overflow: hidden;
     display: flex;
     height: 100vh;
     width: 100%;
+    color: white;
+    justify-content: center;
+    align-items: center;
   }
 }
