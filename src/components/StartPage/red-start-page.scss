@@ -18,7 +18,9 @@
     display: flex;
     height: 100vh;
     z-index: 999;
-    width: 100%;
+    &.displayNone {
+      display: none;
+    }
     .kattints-felirat {
       background-color: #d00c16af;
       color: #ffffff;
@@ -61,13 +63,13 @@
     }
     .cim-background {
       transform: translateX(-500px);
-      animation: slideRight 1s 0.3s ease-out forwards;
+      animation: cimSlideRight 1s 0.3s ease-out forwards;
       background: url("../../images/start-page-cim.png") no-repeat center top
         fixed;
     }
     .foszereplo-background {
       transform: translateX(500px);
-      animation: slideLeft 1s 0.7s ease-out forwards,
+      animation: foszereploSlideLeft 1s 0.7s ease-out forwards,
         jobbraBalraMozgas 4s 1.5s ease-in-out infinite;
       background: url("../../images/start-page-foszereplo.png") no-repeat center
         bottom fixed;
@@ -87,8 +89,27 @@
       width: 100%;
     }
     &.deactivated {
-      display: none;
+      animation: eltunes 1s 1s ease-out forwards;
+      .cim-background {
+        opacity: 1;
+        transform: translateX(0px);
+        animation: cimSlideLeft 1s 0.3s ease-out forwards;
+      }
+      .foszereplo-background {
+        opacity: 1;
+        animation: foszereploSlideRight 1s 0.7s ease-out forwards,
+          jobbraBalraMozgas 4s 1.5s ease-in-out infinite;
+      }
+      .lovas-background {
+        transform: translateY(0px);
+        animation: felLeMozgas 3s 0s ease-in-out infinite,
+          eltunes 2s 0s ease-out forwards;
+      }
+      .kattints-felirat {
+        animation: eltunes 2s 0.1s ease-out forwards;
+      }
     }
+
     @media screen and (max-width: 700px) {
       .cim-background {
         background: url("../../images/start-page-cim-mobile.png") no-repeat
@@ -126,6 +147,14 @@
     opacity: 1;
   }
 }
+@keyframes eltunes {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes jobbraBalraMozgas {
   0% {
     transform: translatex(5px);
@@ -137,7 +166,7 @@
     transform: translatex(5px);
   }
 }
-@keyframes slideLeft {
+@keyframes foszereploSlideLeft {
   0% {
     transform: translateX(500px);
     opacity: 0;
@@ -150,7 +179,20 @@
     opacity: 1;
   }
 }
-@keyframes slideRight {
+@keyframes foszereploSlideRight {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+}
+@keyframes cimSlideRight {
   0% {
     transform: translateX(-500px);
     opacity: 0;
@@ -161,6 +203,19 @@
   100% {
     transform: translateX(0px);
     opacity: 1;
+  }
+}
+@keyframes cimSlideLeft {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-500px);
+    opacity: 0;
   }
 }
 @keyframes kattintsFelirat1 {

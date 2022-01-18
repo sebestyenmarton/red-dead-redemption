@@ -1,0 +1,115 @@
+* {
+  .info-page {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    .home-page-packground {
+      opacity: 0;
+      text-align: center;
+      position: relative;
+      animation: elotunes 2s 7s ease-out forwards;
+      background: url("../../images/fooldal.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      overflow: hidden;
+      font-size: 100px;
+      overflow: hidden;
+      display: flex;
+      height: 100vh;
+      width: 100%;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .cim {
+      }
+      .alcim {
+        font-size: 30px;
+        font-weight: 200;
+        padding: 15px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .arrow {
+          background: url("../../images/fooldal-nyil.png") no-repeat center;
+          text-align: center;
+          position: relative;
+          animation: elotunes 2s 7s ease-out forwards;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          overflow: hidden;
+          overflow: hidden;
+          display: flex;
+          height: 20px;
+          width: 200px;
+          color: white;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          &:first-of-type {
+            transform: rotate(180deg);
+            margin-right: 10px;
+          }
+          &:last-of-type {
+            margin-left: 10px;
+          }
+          @media screen and (max-width: 693px) {
+            margin: 0px;
+          }
+        }
+        .alcim-szoveg {
+          @media screen and (max-width: 693px) {
+            width: 160px;
+          }
+        }
+      }
+      .discord-gomb {
+        background: url("../../images/fooldal-piros-gomb.png") no-repeat center;
+        text-align: center;
+        position: relative;
+        animation: elotunes 2s 7s ease-out forwards;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        overflow: hidden;
+        overflow: hidden;
+        display: flex;
+        height: 50px;
+        width: 380px;
+        transform: scale(0.78);
+        color: white;
+        font-size: 50px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.2s ease-out;
+        cursor: pointer;
+        &:hover {
+          transform: scale(0.8);
+          color: rgb(34, 34, 34);
+        }
+      }
+    }
+  }
+}
+
+@keyframes elotunes {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

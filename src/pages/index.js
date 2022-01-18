@@ -1,9 +1,10 @@
 import React from "react";
-import RedStartPage from "../components/Start-Page/red-start-page";
-import RedHomePage from "../components/Home-Page/red-home-page";
+import RedStartPage from "../components/StartPage/red-start-page";
+import RedHomePage from "../components/HomePage/red-home-page";
+import RedInfoPage from "../components/HomePage/red-home-page";
 
 const Home = () => {
-  return [<RedStartPage />, <RedHomePage />];
+  return [<RedStartPage />, <RedHomePage />, <RedInfoPage />];
 };
 
 export default Home;

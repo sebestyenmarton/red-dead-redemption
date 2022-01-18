@@ -3,6 +3,7 @@ import { FaHandPointer } from "react-icons/fa";
 import "./red-start-page.scss";
 
 const RedStartPage = () => {
+  const [startPageDissolve, setStartPageDissolve] = useState(false);
   const [startPageVisibility, setStartPageVisibility] = useState(false);
   const [timerValue, setTimerValue] = useState(false);
 
@@ -10,7 +11,6 @@ const RedStartPage = () => {
   //  Például 3000 millisecundum megfelel 1 másodpercnek
   useEffect(() => {
     const timer = setTimeout(() => {
-      console.log("Működik");
       setTimerValue(!timerValue);
     }, 3000);
     return () => clearTimeout(timer);
@@ -18,13 +18,19 @@ const RedStartPage = () => {
 
   const dissolve = () => {
     if (timerValue) {
-      setStartPageVisibility(!startPageVisibility);
+      setStartPageDissolve(!startPageDissolve);
+
+      setTimeout(() => {
+        setStartPageVisibility(!startPageVisibility);
+        console.log("Helloooobello");
+      }, 2500);
     }
   };
 
   return (
     <div
-      className={`start-page ${startPageVisibility ? "deactivated" : ""}`}
+      className={`start-page ${startPageDissolve ? "deactivated" : ""} 
+      ${startPageVisibility ? "displayNone" : ""}`}
       onClick={dissolve}
     >
       <div className="cim-background" />
