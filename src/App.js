@@ -1,5 +1,5 @@
 import "./App.scss";
-import Pages from "./page";
+import Pages from "./pages";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {

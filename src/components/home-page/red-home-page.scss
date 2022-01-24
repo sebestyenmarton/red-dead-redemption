@@ -1,11 +1,34 @@
+.pages {
+  display: block;
+  transition: all 0.2s ease-out;
+  &.active {
+    display: flex;
+  }
+}
+
 * {
+  .second-page {
+    height: 100vh;
+    min-width: 100vw;
+    background-color: #000000;
+    .second-page-background {
+      background: url("../../images/fegyveres-bandita.jpg") no-repeat center
+        center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 100vh;
+      width: 100vw;
+    }
+  }
   .home-page {
     text-align: center;
     position: relative;
-    overflow: hidden;
+    //overflow: hidden;
     display: flex;
     height: 100vh;
-    width: 100%;
+    min-width: 100vw;
     background-color: white;
     justify-content: center;
     align-items: center;
@@ -13,14 +36,13 @@
       opacity: 0;
       text-align: center;
       position: relative;
-      background: url("../images/fooldal.jpg") no-repeat center center fixed;
+      background: url("../../images/fooldal.jpg") no-repeat center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
-      overflow: hidden;
       font-size: 100px;
-      overflow: hidden;
+      //overflow: hidden;
       display: flex;
       height: 100vh;
       width: 100%;
@@ -41,7 +63,7 @@
         justify-content: center;
         align-items: center;
         .arrow {
-          background: url("../images/fooldal-nyil.png") no-repeat center;
+          background: url("../../images/fooldal-nyil.png") no-repeat center;
           text-align: center;
           position: relative;
           animation: elotunes 2s 7s ease-out forwards;
@@ -76,7 +98,7 @@
         }
       }
       .discord-gomb {
-        background: url("../images/fooldal-piros-gomb.png") no-repeat center;
+        background: url("../../images/fooldal-piros-gomb.png") no-repeat center;
         text-align: center;
         position: relative;
         animation: elotunes 2s 7s ease-out forwards;
