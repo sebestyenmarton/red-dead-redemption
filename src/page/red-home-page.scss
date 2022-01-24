@@ -13,8 +13,7 @@
       opacity: 0;
       text-align: center;
       position: relative;
-      animation: elotunes 2s 7s ease-out forwards;
-      background: url("../../images/fooldal.jpg") no-repeat center center fixed;
+      background: url("../images/fooldal.jpg") no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -29,6 +28,9 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      &.activated {
+        animation: elotunes 2s 0s ease-out forwards;
+      }
       .cim {
       }
       .alcim {
@@ -39,7 +41,7 @@
         justify-content: center;
         align-items: center;
         .arrow {
-          background: url("../../images/fooldal-nyil.png") no-repeat center;
+          background: url("../images/fooldal-nyil.png") no-repeat center;
           text-align: center;
           position: relative;
           animation: elotunes 2s 7s ease-out forwards;
@@ -74,7 +76,7 @@
         }
       }
       .discord-gomb {
-        background: url("../../images/fooldal-piros-gomb.png") no-repeat center;
+        background: url("../images/fooldal-piros-gomb.png") no-repeat center;
         text-align: center;
         position: relative;
         animation: elotunes 2s 7s ease-out forwards;

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { FaHandPointer } from "react-icons/fa";
 import "./red-start-page.scss";
+import "./red-home-page.scss";
 
-const RedStartPage = () => {
+const Home = () => {
   const [startPageDissolve, setStartPageDissolve] = useState(false);
   const [startPageVisibility, setStartPageVisibility] = useState(false);
   const [timerValue, setTimerValue] = useState(false);
@@ -12,22 +13,23 @@ const RedStartPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setTimerValue(!timerValue);
-    }, 3000);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 
+  // Az alábbi függvénnyel beállítható az, hogy mikortól töltődjön be a home-page
+  // Min. 2000-2500 millisecundum szükséges, míg eltűnik a start page és onnantól kezdve betöltődhet a home-page
   const dissolve = () => {
     if (timerValue) {
       setStartPageDissolve(!startPageDissolve);
-
       setTimeout(() => {
         setStartPageVisibility(!startPageVisibility);
         console.log("Helloooobello");
-      }, 2500);
+      }, 2300);
     }
   };
 
-  return (
+  return [
     <div
       className={`start-page ${startPageDissolve ? "deactivated" : ""} 
       ${startPageVisibility ? "displayNone" : ""}`}
@@ -41,8 +43,23 @@ const RedStartPage = () => {
         <FaHandPointer className="pointer-icon" />
       </div>
       <div className="foszereplo-background" />
-    </div>
-  );
+    </div>,
+    <div className="home-page">
+      <div
+        className={`home-page-packground ${
+          startPageVisibility ? "activated" : ""
+        }`}
+      >
+        <div className="cim">American Wildwest</div>
+        <div className="alcim">
+          <div className="arrow" />
+          <div className="alcim-szoveg">Csatlakozz discord szerverünkre</div>
+          <div className="arrow" />
+        </div>
+        <div className="discord-gomb">DISCORD</div>
+      </div>
+    </div>,
+  ];
 };
 
-export default RedStartPage;
+export default Home;
