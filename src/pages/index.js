@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { FaHandPointer } from "react-icons/fa";
-import { animateScroll as scroll } from "react-scroll";
+/* import { animateScroll as scroll } from "react-scroll";*/
+
 import RedHomePage from "../components/home-page/red-home-page";
+import RedInfoPage from "../components/info-page/red-info-page";
+import RedNavbarSection from "../components/navbar-section/red-navbar-section";
 import RedStartPage from "../components/start-page/red-start-page";
+
+import "./index.scss";
 
 const Pages = () => {
   const [startPageDissolve, setStartPageDissolve] = useState(false);
@@ -10,7 +14,7 @@ const Pages = () => {
   const [timerValue, setTimerValue] = useState(false);
 
   //  Az alábbi függvénnyel beállítható az, hogy mikortól legyen kattintható a startPage
-  //  Például 3000 millisecundum megfelel 1 másodpercnek
+  //  Például 3000 millisecundum megfelel 1 másodpercnek (jelen esetben 1500ms van)
   useEffect(() => {
     const timer = setTimeout(() => {
       setTimerValue(!timerValue);
@@ -18,7 +22,7 @@ const Pages = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Az alábbi függvénnyel beállítható az, hogy mikortól töltődjön be a home-page
+  // Az alábbi függvénnyel beállítható az, hogy mikortól töltődjön be a home-page, nemigazán ajánlatos az állítgatása
   // Min. 2000-2500 millisecundum szükséges, míg eltűnik a start page és onnantól kezdve betöltődhet a home-page
   const dissolve = () => {
     if (timerValue) {
@@ -40,7 +44,11 @@ const Pages = () => {
         startPageVisibility={startPageVisibility}
         dissolve={dissolve}
       />
-      <RedHomePage startPageVisibility={startPageVisibility} />
+      {startPageDissolve && (
+        <RedHomePage startPageVisibility={startPageVisibility} />
+      )}
+      {startPageDissolve && <RedInfoPage />}
+      {startPageDissolve && <RedNavbarSection />}
     </div>
   );
 };

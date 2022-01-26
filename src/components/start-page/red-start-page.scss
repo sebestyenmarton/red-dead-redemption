@@ -23,7 +23,7 @@
       display: none;
     }
     .kattints-felirat {
-      background-color: #00000090;
+      background-color: #d00c16af;
       color: #ffffff;
       font-weight: 900;
       text-transform: uppercase;
@@ -42,11 +42,11 @@
       height: 60px;
       margin: auto auto;
       bottom: 0%;
-      top: 0%;
       right: 0%;
       left: 0%;
       &:hover {
-        background-color: #d00c16af;
+        background-color: #d32e3611;
+        color: #e49a12;
       }
       .pointer-icon {
         margin-left: 20px;

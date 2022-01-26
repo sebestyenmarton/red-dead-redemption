@@ -1,0 +1,15 @@
+.second-page {
+  height: 100vh;
+  min-width: 100vw;
+  background-color: #000000;
+  .second-page-background {
+    background: url("../../images/fegyveres-bandita.jpg") no-repeat center
+      center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+}

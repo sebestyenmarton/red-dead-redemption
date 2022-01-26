@@ -1,10 +1,9 @@
 import React from "react";
-import { animateScroll as scroll } from "react-scroll";
 
 import "./red-home-page.scss";
 
 const RedHomePage = ({ startPageVisibility }) => {
-  return [
+  return (
     <div className="home-page">
       <div
         className={`home-page-packground ${
@@ -24,11 +23,8 @@ const RedHomePage = ({ startPageVisibility }) => {
           DISCORD
         </a>
       </div>
-    </div>,
-    <div className="second-page">
-      <div className="second-page-background" id="secondPage"></div>
-    </div>,
-  ];
+    </div>
+  );
 };
 
 export default RedHomePage;
