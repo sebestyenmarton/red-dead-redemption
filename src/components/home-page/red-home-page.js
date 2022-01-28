@@ -18,7 +18,8 @@ const RedHomePage = ({ startPageVisibility }) => {
         </div>
         <a
           className="discord-gomb"
-          href="#secondPage" /* onClick={toggleHome} */
+          /* href="#secondPage" onClick={toggleHome} */
+          to="secondPage"
         >
           DISCORD
         </a>
