@@ -10,7 +10,7 @@ Fontosabb helyek a webaplikációban, ahol kommenteket lehet találni és egysze
 
 ### A következő parancsokat kell futtatni a terminál-ban, ahhoz, hogy végül elinduljon az applikáció:
 
-Install project dependencies
+Install project dependencies:
 
         npm install
 
@@ -18,9 +18,13 @@ To install the React-Dom:
 
         npm i react-router-dom
 
-To install React-ICONS
+To install React-ICONS:
 
         npm install react-icons --save
+
+To install React scrolling:
+
+        npm install react-scroll
 
 ## Available Scripts
 
