@@ -32,7 +32,7 @@
     }
     .navbar-menu {
       display: flex;
-      li {
+      .menu-item {
         position: relative;
         padding: 30px 20px;
         cursor: pointer;
@@ -68,15 +68,23 @@
             transform: scale(1.8);
             margin-left: -10px;
           }
-          &.active {
+        }
+        &:hover {
+          color: #e49a12;
+          .navbar-background {
+            display: block;
+            opacity: 0.5;
+          }
+        }
+        &.active {
+          .navbar-background {
             display: block;
             opacity: 1;
           }
-        }
-        &:hover {
-          .navbar-background {
-            display: block;
-            &.active {
+          &:hover {
+            .navbar-background {
+              display: block;
+              color: #000000;
               background: url("../../images/navbar-background-red.png")
                 no-repeat center center;
               -webkit-background-size: cover;

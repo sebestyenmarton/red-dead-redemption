@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-/* import { animateScroll as scroll } from "react-scroll";*/
+import { Link } from "react-scroll";
 
 import RedHomePage from "../components/home-page/red-home-page";
 import RedInfoPage from "../components/info-page/red-info-page";
 import RedNavbarSection from "../components/navbar-section/red-navbar-section";
 import RedStartPage from "../components/start-page/red-start-page";
+import RedGyikPage from "../components/gyik-page/red-gyik-page";
+import RedMediaPage from "../components/media-page/red-media-page";
 
 import "./index.scss";
 
@@ -33,10 +35,6 @@ const Pages = () => {
     }
   };
 
-  /*   const toggleHome = () => {
-    scroll.scrollToTop();
-  }; */
-
   return (
     <div className={`pages ${startPageVisibility ? "active" : ""}`}>
       <RedStartPage
@@ -48,6 +46,8 @@ const Pages = () => {
         <RedHomePage startPageVisibility={startPageVisibility} />
       )}
       {startPageDissolve && <RedInfoPage />}
+      {startPageDissolve && <RedGyikPage />}
+      {startPageDissolve && <RedMediaPage />}
       {startPageDissolve && <RedNavbarSection />}
     </div>
   );

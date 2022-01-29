@@ -3,6 +3,7 @@
   transition: all 0.2s ease-out;
   &.active {
     display: flex;
+    flex-direction: column;
   }
 }
 .logo {
@@ -91,7 +92,7 @@
       -moz-background-size: contain;
       -o-background-size: contain;
       background-size: contain;
-      text-decoration: none;
+      //text-decoration: none;
       overflow: hidden;
       display: flex;
       height: 90px;

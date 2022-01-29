@@ -4,8 +4,8 @@ import "./red-info-page.scss";
 
 const RedInfoPage = () => {
   return (
-    <div className="second-page" id="secondPage">
-      <div className="second-page-background"></div>
+    <div className="info-page" id="infoPage">
+      <div className="info-page-background"></div>
     </div>
   );
 };
