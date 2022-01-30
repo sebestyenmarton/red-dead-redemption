@@ -6,9 +6,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Fontosabb helyek a webaplikációban, ahol kommenteket lehet találni és egyszerűen lehet változtatni a kódot:
 
-### `red-start-page.js` - Állítható az, hogy mikortól legyen kattintható a Start Page.
+### `page/index.js` - Állítható az, hogy mikortól legyen kattintható a Start Page, illetve itt hívódik meg az összes oldalrész, ami a menüben is szerepel.
 
-### A következő parancsokat kell futtatni a terminál-ban, ahhoz, hogy végül elinduljon az applikáció:
+### `page/index.scss` && `components/navbar-section/red-navbar-section.js` - Ezen a két helyen kell állítani a kommentek alapján ahhoz, hogy horizontális vagy vertikális scrollozással lehessen váltani az oldalak között
+
+### A következő parancsokat kell futtatni a terminál-ban az applikáció főkönyvtárára nézve, ahhoz, hogy végül elinduljon az applikáció:
 
 Install project dependencies:
 

@@ -4,7 +4,11 @@ import { FaHandPointer } from "react-icons/fa";
 
 import "./red-start-page.scss";
 
-const RedStartPage = ({ startPageDissolve, startPageVisibility, dissolve }) => {
+const RedStartSection = ({
+  startPageDissolve,
+  startPageVisibility,
+  dissolve,
+}) => {
   return (
     <div
       className={`start-page ${startPageDissolve ? "deactivated" : ""} ${
@@ -24,4 +28,4 @@ const RedStartPage = ({ startPageDissolve, startPageVisibility, dissolve }) => {
   );
 };
 
-export default RedStartPage;
+export default RedStartSection;
