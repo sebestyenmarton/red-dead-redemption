@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+
+import ReactPlayer from "react-player/youtube";
 
 import RedHomePage from "../components/pages/home-page/red-home-page";
 import RedInfoPage from "../components/pages/info-page/red-info-page";
@@ -14,6 +15,16 @@ const RedPages = () => {
   const [startPageDissolve, setStartPageDissolve] = useState(false);
   const [startPageVisibility, setStartPageVisibility] = useState(false);
   const [timerValue, setTimerValue] = useState(false);
+  const [youtubePlayer, setYoutubePlayer] = useState(false);
+  const [nextPlaylist, setNextPlaylist] = useState(false);
+
+  const setPlayerFunction = () => {
+    setYoutubePlayer(!youtubePlayer);
+  };
+
+  const switchFunction = () => {
+    setNextPlaylist(!nextPlaylist);
+  };
 
   //  Az alábbi függvénnyel beállítható az, hogy mikortól legyen kattintható a startPage
   //  Például 3000 millisecundum megfelel 1 másodpercnek (jelen esetben 1500ms van)
@@ -31,9 +42,14 @@ const RedPages = () => {
       setStartPageDissolve(!startPageDissolve);
       setTimeout(() => {
         setStartPageVisibility(!startPageVisibility);
+        setPlayerFunction();
       }, 2300);
     }
   };
+
+  /*   componentDidMount(setPlayerFunction){
+    ;
+  } */
 
   return (
     <div className={`pages ${startPageVisibility ? "active" : ""}`}>
@@ -48,7 +64,23 @@ const RedPages = () => {
       {startPageDissolve && <RedInfoPage />}
       {startPageDissolve && <RedGyikPage />}
       {startPageDissolve && <RedMediaPage />}
-      {startPageDissolve && <RedNavbarSection />}
+      {startPageDissolve && (
+        <RedNavbarSection
+          setPlayerFunction={setPlayerFunction}
+          youtubePlayer={youtubePlayer}
+          switchFunction={switchFunction}
+        />
+      )}
+      <ReactPlayer
+        url={[
+          "https://www.youtube.com/watch?v=T80B7s7ekGo",
+          "https://www.youtube.com/watch?v=6MZw_Iv0wdU",
+          "https://www.youtube.com/watch?v=jNgP6d9HraI",
+        ]}
+        className="youtube-music-player"
+        //loop={nextPlaylist}
+        playing={youtubePlayer}
+      />
     </div>
   );
 };

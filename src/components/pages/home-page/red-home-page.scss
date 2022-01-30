@@ -7,11 +7,15 @@
   background-color: white;
   justify-content: center;
   align-items: center;
+  .youtube-music-player {
+    position: absolute;
+    opacity: 0;
+  }
   .home-page-packground {
     opacity: 0;
     text-align: center;
     position: relative;
-    background: url("../../../images/fooldal.jpg") no-repeat center center;
+    background: url("../../../images/tabortuz.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

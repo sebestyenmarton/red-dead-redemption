@@ -9,6 +9,7 @@
   .navbar {
     height: 100px;
     display: flex;
+    transition: all 0.2s ease-out;
     .navbar-logo {
       margin: -12px 0px 0px -5px;
       background: url("../../images/logo.png") no-repeat center center;
@@ -19,7 +20,6 @@
       cursor: pointer;
       height: 100px;
       width: 100px;
-
       transform: scale(0.7);
       &:hover {
         background: url("../../images/logo2.png") no-repeat center center;
@@ -115,9 +115,56 @@
       }
     }
     .navbar-top-right {
-      padding: 30px 20px;
+      position: relative;
+      padding: 27px 20px;
       color: #ffffff;
       font-size: 18px;
+      cursor: pointer;
+      .next {
+        position: absolute;
+        display: none;
+        right: 0px;
+        top: 5px;
+        &:hover {
+          color: #d00c16;
+        }
+      }
+      .spinner {
+        color: #ffffff;
+        position: absolute;
+        //opacity: 0.2;
+        font-size: 50px;
+        right: 7px;
+        top: 15px;
+      }
+      .spinner.active {
+        animation: forgas 12s 0s linear infinite;
+      }
+      .pause-button,
+      .play-button {
+        font-size: 25px;
+      }
+      &:hover {
+        .pause-button,
+        .play-button {
+          color: #e49a12;
+        }
+      }
+      &:active {
+        .pause-button,
+        .play-button {
+          color: #d00c16;
+        }
+      }
     }
+  }
+}
+
+@keyframes forgas {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

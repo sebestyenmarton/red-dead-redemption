@@ -1,5 +1,11 @@
 import React from "react";
 import { Link as LinkS } from "react-scroll";
+import {
+  FaPlayCircle,
+  FaPauseCircle,
+  FaCircleNotch,
+  FaAngleRight,
+} from "react-icons/fa";
 
 import "./red-navbar-section.scss";
 
@@ -12,7 +18,11 @@ import "./red-navbar-section.scss";
 //  A függőleges weboldal és függőleges scrollozás eléréséhez a "horizontal" értéke "false" kell legyen ( horizontal={false} )
 //  Váltáskor kötelezően kell a `page/index.scss` file-ban is változtatni a kódban a kommentek alapján
 
-const RedNavbarSection = () => {
+const RedNavbarSection = ({
+  setPlayerFunction,
+  youtubePlayer,
+  switchFunction,
+}) => {
   return (
     <div className="navbar-section">
       <div className="navbar">
@@ -78,7 +88,17 @@ const RedNavbarSection = () => {
           </LinkS>
         </div>
         <div className="navbar-line" />
-        <div className="navbar-top-right">Rádio</div>
+        <div className="navbar-top-right" onClick={setPlayerFunction}>
+          {youtubePlayer ? (
+            <FaPauseCircle className="pause-button" />
+          ) : (
+            <FaPlayCircle className="play-button" />
+          )}
+          <FaCircleNotch
+            className={`spinner ${youtubePlayer ? "active" : ""}`}
+          />
+          <FaAngleRight className="next" onClick={switchFunction} />
+        </div>
       </div>
       <div className="navbar-center"></div>
       <div className="navbar-bottom"></div>
