@@ -4,11 +4,18 @@
   background-color: #000000;
   .media-page-background {
     background: url("../../../images/fooldal.jpg") no-repeat center center;
+    background: #000000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    overflow: auto;
+    .react-photo-gallery--gallery {
+      margin: 80px 30px 30px 30px;
+      cursor: pointer;
+      border-radius: 30px;
+    }
   }
 }

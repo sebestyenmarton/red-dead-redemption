@@ -1,10 +1,15 @@
-.pages {
-  display: block;
-  &.active {
-    position: absolute;
-    display: flex;
-    //Ha horizontális scrollozást szeretnénk, akkor ki kell legyen kommentálva a "flex-direction: column" ( // -kikommentálás)
-    //Ha vertikális scrollozást vagyis függőleges weboldalt szeretnénk, akkor a "flex-direction: column" kell legyen, kikommentálás nélkül
-    //flex-direction: column;
+* {
+  margin: 0px;
+  overflow: hidden;
+  font-family: "Chinese Rocks Rg", sans-serif;
+  .pages {
+    display: block;
+    &.active {
+      position: absolute;
+      display: flex;
+      //Ha horizontális scrollozást szeretnénk, akkor ki kell legyen kommentálva a "flex-direction: column" ( // -kikommentálás)
+      //Ha vertikális scrollozást vagyis függőleges weboldalt szeretnénk, akkor a "flex-direction: column" kell legyen, kikommentálás nélkül
+      //flex-direction: column;
+    }
   }
 }
