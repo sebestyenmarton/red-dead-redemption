@@ -1,5 +1,6 @@
 {
   "name": "red-dead-redemption",
+  "homepage": "http://red.reftarkany.hu/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
