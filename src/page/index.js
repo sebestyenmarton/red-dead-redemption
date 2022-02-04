@@ -18,6 +18,10 @@ const RedPages = () => {
   const [youtubePlayer, setYoutubePlayer] = useState(false);
   const [nextPlaylist, setNextPlaylist] = useState(false);
 
+  //Ha horizontális scrollozást szeretnénk, akkor horizontalScrolling = true kell legyen
+  //Ha vertikális scrollozást vagyis függőleges weboldalt szeretnénk, akkor horizontalScrolling = false
+  const horizontalScrolling = false;
+
   const setPlayerFunction = () => {
     setYoutubePlayer(!youtubePlayer);
   };
@@ -47,12 +51,12 @@ const RedPages = () => {
     }
   };
 
-  /*   componentDidMount(setPlayerFunction){
-    ;
-  } */
-
   return (
-    <div className={`pages ${startPageVisibility ? "active" : ""}`}>
+    <div
+      className={`pages ${startPageVisibility ? "active" : ""} ${
+        horizontalScrolling ? "" : "horizontal-scrolling"
+      }`}
+    >
       <RedStartSection
         startPageDissolve={startPageDissolve}
         startPageVisibility={startPageVisibility}
@@ -69,6 +73,7 @@ const RedPages = () => {
           setPlayerFunction={setPlayerFunction}
           youtubePlayer={youtubePlayer}
           switchFunction={switchFunction}
+          horizontalScrolling={horizontalScrolling}
         />
       )}
       <ReactPlayer
@@ -78,7 +83,6 @@ const RedPages = () => {
           "https://www.youtube.com/watch?v=jNgP6d9HraI",
         ]}
         className="youtube-music-player"
-        //loop={nextPlaylist}
         playing={youtubePlayer}
       />
     </div>

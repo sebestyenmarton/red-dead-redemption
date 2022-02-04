@@ -8,7 +8,7 @@ Fontosabb helyek a webaplikációban, ahol kommenteket lehet találni és egysze
 
 ### `page/index.js` - Állítható az, hogy mikortól legyen kattintható a Start Page, illetve itt hívódik meg az összes oldalrész, ami a menüben is szerepel.
 
-### `page/index.scss` && `components/navbar-section/red-navbar-section.js` - Ezen a két helyen kell állítani a kommentek alapján ahhoz, hogy horizontális vagy vertikális scrollozással lehessen váltani az oldalak között
+### `page/index.js` - Itt be lehet állítani, hogy horizontális vagy vertikális scrollozást szeretnénk e, vagyis függőleges vagy vízszintes weboldalt
 
 ### A következő parancsokat kell futtatni a terminál-ban az applikáció főkönyvtárára nézve, ahhoz, hogy végül elinduljon az applikáció:
 
@@ -18,7 +18,7 @@ Install project dependencies:
 
 To install the React-Dom:
 
-        npm i react-router-dom
+        npm install react-router-dom
 
 To install React-ICONS:
 
@@ -27,6 +27,11 @@ To install React-ICONS:
 To install React scrolling:
 
         npm install react-scroll
+
+To the media gallery page:
+
+        npm install react-images
+        npm install react-photo-gallery
 
 ## Available Scripts
 

@@ -7,9 +7,12 @@
     &.active {
       position: absolute;
       display: flex;
-      //Ha horizontális scrollozást szeretnénk, akkor ki kell legyen kommentálva a "flex-direction: column" ( // -kikommentálás)
-      //Ha vertikális scrollozást vagyis függőleges weboldalt szeretnénk, akkor a "flex-direction: column" kell legyen, kikommentálás nélkül
-      //flex-direction: column;
+      &.horizontal-scrolling {
+        flex-direction: column;
+      }
+    }
+    .youtube-music-player {
+      opacity: 0;
     }
   }
 }

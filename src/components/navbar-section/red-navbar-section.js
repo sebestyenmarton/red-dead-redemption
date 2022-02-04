@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link as LinkS } from "react-scroll";
 import {
   FaPlayCircle,
@@ -22,25 +22,37 @@ const RedNavbarSection = ({
   setPlayerFunction,
   youtubePlayer,
   switchFunction,
+  horizontalScrolling,
 }) => {
+  const [firstTimeIsActive, setFirstTimeIsActive] = useState(false);
+
+  const setActive = () => {
+    if (!firstTimeIsActive) {
+      setFirstTimeIsActive(!firstTimeIsActive);
+      console.log("Is active? ...:", firstTimeIsActive);
+    }
+  };
+
   return (
     <div className="navbar-section">
       <div className="navbar">
         <LinkS
+          onClick={setActive}
           className="navbar-logo"
           duration={500}
           to="homePage"
           spy={true}
           exact="true"
           smooth={true}
-          horizontal={true}
+          horizontal={horizontalScrolling}
         />
         <div className="navbar-line first" />
         <div className="navbar-menu">
           <LinkS
-            className="menu-item"
-            activeClass="active"
-            horizontal={true}
+            onClick={setActive}
+            className={`menu-item ${firstTimeIsActive ? "activated" : "first"}`}
+            activeClass={false}
+            horizontal={horizontalScrolling}
             duration={500}
             to="homePage"
             spy={true}
@@ -51,8 +63,10 @@ const RedNavbarSection = ({
             <div className="navbar-background elso active" />
           </LinkS>
           <LinkS
-            className="menu-item"
-            horizontal={true}
+            onClick={setActive}
+            s
+            className={`menu-item ${firstTimeIsActive ? "activated" : ""}`}
+            horizontal={horizontalScrolling}
             to="infoPage"
             spy={true}
             smooth={true}
@@ -63,8 +77,9 @@ const RedNavbarSection = ({
             <div className="navbar-background masodik" />
           </LinkS>
           <LinkS
-            className="menu-item"
-            horizontal={true}
+            onClick={setActive}
+            className={`menu-item ${firstTimeIsActive ? "activated" : ""}`}
+            horizontal={horizontalScrolling}
             to="gyikPage"
             spy={true}
             smooth={true}
@@ -75,8 +90,9 @@ const RedNavbarSection = ({
             <div className="navbar-background harmadik" />
           </LinkS>
           <LinkS
-            className="menu-item"
-            horizontal={true}
+            onClick={setActive}
+            className={`menu-item ${firstTimeIsActive ? "activated" : ""}`}
+            horizontal={horizontalScrolling}
             to="mediaPage"
             spy={true}
             smooth={true}

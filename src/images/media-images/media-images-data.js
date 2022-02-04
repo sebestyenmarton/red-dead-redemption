@@ -13,7 +13,7 @@ import Img12 from "./img-12.jpg";
 
 export const photos = [
   {
-    src: Img1,
+    src: Img11,
     width: 4,
     height: 2.5,
   },
@@ -63,7 +63,7 @@ export const photos = [
     height: 1.2,
   },
   {
-    src: Img11,
+    src: Img1,
     width: 4,
     height: 2.7,
   },

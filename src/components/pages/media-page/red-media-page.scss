@@ -13,9 +13,15 @@
     width: 100vw;
     overflow: auto;
     .react-photo-gallery--gallery {
-      margin: 80px 30px 30px 30px;
+      margin: 80px 100px 30px 100px;
       cursor: pointer;
       border-radius: 30px;
+      img {
+        margin: 20px;
+      }
     }
   }
+}
+.react-images__blanket.css-16jr3vd.css-1ycyyax {
+  background: #000000;
 }

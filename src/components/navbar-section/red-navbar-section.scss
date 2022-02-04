@@ -82,7 +82,8 @@
             opacity: 0.5;
           }
         }
-        &.active {
+        &.active.activated,
+        &.first {
           .navbar-background {
             display: block;
             opacity: 1;
@@ -110,6 +111,18 @@
                 transform: scale(2);
               }
             }
+          }
+        }
+        &:last-of-type.active.activated {
+          .navbar-background {
+            display: block;
+            color: #000000;
+            background: url("../../images/navbar-background-red.png") no-repeat
+              center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
           }
         }
       }
