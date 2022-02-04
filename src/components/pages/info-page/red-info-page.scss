@@ -11,5 +11,45 @@
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    position: relative;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .info-content {
+      margin: 40px 50px;
+      padding: 30px 60px;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 10px 10px 20px #ffffff4d;
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+      .info-text-box {
+        .info-title {
+          font-size: 50px;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+        .info-description {
+          padding: 0px;
+          font-size: 22px;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+          li {
+            margin-bottom: 15px;
+          }
+        }
+      }
+      .svg {
+        display: flex;
+        justify-content: center;
+        .horse-man {
+          width: 200px;
+          opacity: 0.3;
+        }
+      }
+    }
   }
 }

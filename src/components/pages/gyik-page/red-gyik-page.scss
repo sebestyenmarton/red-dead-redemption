@@ -10,5 +10,37 @@
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    position: relative;
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .gyik-content {
+      margin: 40px 50px;
+      padding: 30px 60px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.5);
+      box-shadow: 10px 10px 20px #0000004d;
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+      .gyik-text-box {
+        .gyik-title {
+          font-size: 50px;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+        .gyik-description {
+          padding: 0px;
+          font-size: 22px;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+          li {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
   }
 }

@@ -20,7 +20,7 @@ const RedPages = () => {
 
   //Ha horizontális scrollozást szeretnénk, akkor horizontalScrolling = true kell legyen
   //Ha vertikális scrollozást vagyis függőleges weboldalt szeretnénk, akkor horizontalScrolling = false
-  const horizontalScrolling = false;
+  const horizontalScrolling = true;
 
   const setPlayerFunction = () => {
     setYoutubePlayer(!youtubePlayer);
