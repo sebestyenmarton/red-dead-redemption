@@ -31,7 +31,20 @@
     &.activated {
       animation: elotunes 2s 0s ease-out forwards;
     }
-    .cim {
+    .cim-box {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      @media screen and (max-width: 650px) {
+        max-width: 300px;
+        .cim {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+
+          font-size: 70px;
+        }
+      }
     }
     .alcim {
       font-size: 30px;

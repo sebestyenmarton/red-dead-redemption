@@ -10,7 +10,9 @@ const RedHomePage = ({ startPageVisibility }) => {
           startPageVisibility ? "activated" : ""
         }`}
       >
-        <div className="cim">American Wildwest</div>
+        <div className="cim-box">
+          <div className="cim">American Wildwest</div>
+        </div>
         <div className="alcim">
           <div className="arrow" />
           <div className="alcim-szoveg">Csatlakozz discord szerverünkre</div>

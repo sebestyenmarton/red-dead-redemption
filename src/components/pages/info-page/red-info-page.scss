@@ -26,6 +26,9 @@
       max-width: 1000px;
       display: flex;
       flex-direction: column;
+      overflow: auto;
+      max-height: 80vh;
+      display: block;
       .info-text-box {
         .info-title {
           font-size: 50px;
@@ -49,6 +52,19 @@
           width: 200px;
           opacity: 0.3;
         }
+      }
+    }
+    @media screen and (max-width: 589px) {
+      padding-top: 30px;
+      .info-content {
+        margin: 40px 15px;
+        padding: 30px 40px;
+      }
+      .info-title {
+        font-size: 22px;
+        text-decoration: underline;
+        text-align: start;
+        margin-bottom: 10px;
       }
     }
   }

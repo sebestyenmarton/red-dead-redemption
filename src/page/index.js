@@ -83,6 +83,7 @@ const RedPages = () => {
           "https://www.youtube.com/watch?v=jNgP6d9HraI",
         ]}
         className="youtube-music-player"
+        //width={0}
         playing={youtubePlayer}
       />
     </div>

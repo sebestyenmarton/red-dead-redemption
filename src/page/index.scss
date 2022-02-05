@@ -1,9 +1,13 @@
 * {
   margin: 0px;
-  overflow: hidden;
   font-family: "Chinese Rocks Rg", sans-serif;
+  overflow: hidden;
+  .info-content {
+    overflow: auto;
+  }
   .pages {
     display: block;
+    overflow: hidden;
     &.active {
       position: absolute;
       display: flex;
