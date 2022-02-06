@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link as LinkS } from "react-scroll";
+import { Divide as Hamburger } from "hamburger-react";
+import { FaFacebook } from "react-icons/fa";
 import {
   FaPlayCircle,
   FaPauseCircle,
@@ -25,8 +27,10 @@ const RedNavbarSection = ({
   horizontalScrolling,
 }) => {
   const [firstTimeIsActive, setFirstTimeIsActive] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   const setActive = () => {
+    setOpen(!isOpen);
     if (!firstTimeIsActive) {
       setFirstTimeIsActive(!firstTimeIsActive);
       console.log("Is active? ...:", firstTimeIsActive);
@@ -47,9 +51,10 @@ const RedNavbarSection = ({
           horizontal={horizontalScrolling}
         />
         <div className="navbar-line first" />
-        <div className="navbar-menu">
+        <div className={`navbar-menu ${isOpen ? "is-open" : "is-close"}`}>
           <LinkS
             onClick={setActive}
+            toggle={setOpen}
             className={`menu-item ${firstTimeIsActive ? "activated" : "first"}`}
             activeClass={false}
             horizontal={horizontalScrolling}
@@ -64,7 +69,7 @@ const RedNavbarSection = ({
           </LinkS>
           <LinkS
             onClick={setActive}
-            s
+            toggle={setOpen}
             className={`menu-item ${firstTimeIsActive ? "activated" : ""}`}
             horizontal={horizontalScrolling}
             to="infoPage"
@@ -78,6 +83,7 @@ const RedNavbarSection = ({
           </LinkS>
           <LinkS
             onClick={setActive}
+            toggle={setOpen}
             className={`menu-item ${firstTimeIsActive ? "activated" : ""}`}
             horizontal={horizontalScrolling}
             to="gyikPage"
@@ -91,6 +97,7 @@ const RedNavbarSection = ({
           </LinkS>
           <LinkS
             onClick={setActive}
+            toggle={setOpen}
             className={`menu-item ${firstTimeIsActive ? "activated" : ""}`}
             horizontal={horizontalScrolling}
             to="mediaPage"
@@ -104,20 +111,30 @@ const RedNavbarSection = ({
           </LinkS>
         </div>
         <div className="navbar-line" />
-        <div className="navbar-top-right" onClick={setPlayerFunction}>
+        <div className="navbar-top-right">
+          <div className="hamburger">
+            <Hamburger toggled={isOpen} toggle={setOpen} />
+          </div>
           {youtubePlayer ? (
-            <FaPauseCircle className="pause-button" />
+            <FaPauseCircle
+              className="pause-button"
+              onClick={setPlayerFunction}
+            />
           ) : (
-            <FaPlayCircle className="play-button" />
+            <FaPlayCircle className="play-button" onClick={setPlayerFunction} />
           )}
           <FaCircleNotch
             className={`spinner ${youtubePlayer ? "active" : ""}`}
+            onClick={setPlayerFunction}
           />
           <FaAngleRight className="next" onClick={switchFunction} />
         </div>
       </div>
       <div className="navbar-center"></div>
-      <div className="navbar-bottom"></div>
+      <div className="navbar-bottom">
+        <div className="navbar-line" />
+        <FaFacebook href="https://www.facebook.com" className="facebook-icon" />
+      </div>
     </div>
   );
 };

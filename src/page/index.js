@@ -83,7 +83,9 @@ const RedPages = () => {
           "https://www.youtube.com/watch?v=jNgP6d9HraI",
         ]}
         className="youtube-music-player"
-        //width={0}
+        width={0}
+        // Itt állítható a hangerő 0.00 és 0.1 közötti értékekkel
+        volume={0.01}
         playing={youtubePlayer}
       />
     </div>

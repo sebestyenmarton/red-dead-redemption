@@ -8,6 +8,8 @@ Fontosabb helyek a webaplikációban, ahol kommenteket lehet találni és egysze
 
 ### `page/index.js` - Állítható az, hogy mikortól legyen kattintható a Start Page, illetve itt hívódik meg az összes oldalrész, ami a menüben is szerepel.
 
+### `page/index.js - HANGERŐ` - A js file alján állítható a hangerő
+
 ### `page/index.js` - Itt be lehet állítani, hogy horizontális vagy vertikális scrollozást szeretnénk e, vagyis függőleges vagy vízszintes weboldalt
 
 ### A következő parancsokat kell futtatni a terminál-ban az applikáció főkönyvtárára nézve, ahhoz, hogy végül elinduljon az applikáció:
