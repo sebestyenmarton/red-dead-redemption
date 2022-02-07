@@ -91,8 +91,9 @@ const RedPages = () => {
         ]}
         className="youtube-music-player"
         width={0}
-        // Itt állítható a hangerő 0.00 és 0.1 közötti értékekkel
-        volume={0.03}
+        // Itt állítható a hangerő 0.00 és 1 közötti értékekkel
+        // Az első számmal a mobilon állítható a hangerő, a másodikkal a nagyobb készülékeken, desctopon
+        volume={mediaQuery.matches ? 1 : 0.05}
         playing={youtubePlayer}
       />
     </div>
