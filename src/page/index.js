@@ -20,7 +20,7 @@ const RedPages = () => {
 
   //Ha horizontális scrollozást szeretnénk, akkor horizontalScrolling = true kell legyen
   //Ha vertikális scrollozást vagyis függőleges weboldalt szeretnénk, akkor horizontalScrolling = false
-  const horizontalScrolling = true;
+  var horizontalScrolling = true;
 
   const setPlayerFunction = () => {
     setYoutubePlayer(!youtubePlayer);
@@ -29,6 +29,13 @@ const RedPages = () => {
   const switchFunction = () => {
     setNextPlaylist(!nextPlaylist);
   };
+
+  const mediaQuery = window.matchMedia("(max-width: 650px)");
+  // Check if the media query is true
+  if (mediaQuery.matches) {
+    // A mobilokon függőleges szkollozást állítunk be ha a képernyő szélessége mobilfelbontásban kissebb 650px-n;l
+    horizontalScrolling = false;
+  }
 
   //  Az alábbi függvénnyel beállítható az, hogy mikortól legyen kattintható a startPage
   //  Például 3000 millisecundum megfelel 1 másodpercnek (jelen esetben 1500ms van)

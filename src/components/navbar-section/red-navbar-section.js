@@ -33,7 +33,6 @@ const RedNavbarSection = ({
     setOpen(!isOpen);
     if (!firstTimeIsActive) {
       setFirstTimeIsActive(!firstTimeIsActive);
-      console.log("Is active? ...:", firstTimeIsActive);
     }
   };
 
