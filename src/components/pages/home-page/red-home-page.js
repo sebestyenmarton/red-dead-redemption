@@ -18,7 +18,9 @@ const RedHomePage = ({ startPageVisibility }) => {
           <div className="alcim-szoveg">Csatlakozz discord szerverünkre</div>
           <div className="arrow" />
         </div>
-        <div className="discord-gomb">DISCORD</div>
+        <a className="discord-gomb" href="https://discord.com">
+          DISCORD
+        </a>
       </div>
     </div>
   );

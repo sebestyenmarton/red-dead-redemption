@@ -132,7 +132,9 @@ const RedNavbarSection = ({
       <div className="navbar-center"></div>
       <div className="navbar-bottom">
         <div className="navbar-line" />
-        <FaFacebook href="https://www.facebook.com" className="facebook-icon" />
+        <a href="https://www.facebook.com">
+          <FaFacebook className="facebook-icon" />
+        </a>
       </div>
     </div>
   );
